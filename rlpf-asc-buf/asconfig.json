@@ -1,0 +1,19 @@
+{
+  "targets": {
+    "rlpf": {
+      "outFile": "build/rlpf.wasm",
+      "textFile": "build/rlpf.wat",
+      "sourceMap": true,
+      "shrinkLevel": 0,
+      "converge": false,
+      "noAssert": false,
+      "debug": true,
+      "optimizeLevel":3,
+      "use":"Math=NativeMathf",
+      "memoryBase":512
+    }
+  },
+  "options": {
+    "bindings": "esm"
+  }
+}

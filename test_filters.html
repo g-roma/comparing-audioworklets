@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script type="module" src="test_filters.js"></script>
+  </head>
+  <body>
+    Worklet:
+    <select id="worklet">
+      <option value="rlpf-js/rlpf-js-processor.js">JavaScript</option>
+      <option value="rlpf-ems-ps/rlpf-ems-ps-processor.js">Per-sample ems</option>
+      <option value="rlpf-ems-buf/rlpf-ems-buf-processor.js">Buffer-based ems</option>
+      <option value="rlpf-asc-ps/rlpf-asc-ps-processor.js">Per-sample asc</option>
+      <option value="rlpf-asc-buf/rlpf-asc-buf-processor.js">Buffer-based asc</option>
+    </select>
+    <div>
+      <input type="checkbox" id="test" name="test">
+      <label for="test">Test</label><br/>
+      <input type="range" id="cutoff" name="cutoff" min="50" max="1500">
+      <label for="cutoff">Cutoff</label><br/>
+      <input type="range" id="resonance" name="resonance" min="-30" max="30" step = "1">
+      <!--input type="range" id="resonance" name="resonance" min="0" max="1" step = "0.1"-->
+      <label for="resonance">Resonance</label>
+
+    </div>
+  </body>
+</html>

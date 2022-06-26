@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script type="module" src="test_saws.js"></script>
+  </head>
+  <body>
+    Worklet:
+    <select id="worklet">
+      <option value="saw-js/saw-js-processor.js">JavaScript</option>
+      <option value="saw-ems-ps/saw-ems-ps-processor.js">Per-sample ems</option>
+      <option value="saw-ems-buf/saw-ems-buf-processor.js">Buffer-based ems</option>
+      <option value="saw-asc-ps/saw-asc-ps-processor.js">Per-sample asc</option>
+      <option value="saw-asc-buf/saw-asc-buf-processor.js">Buffer-based asc</option>
+    </select>
+
+    <div>
+      <input type="checkbox" id="test" name="test">
+      <label for="test">Test</label><br/>
+      <input type="range" id="frequency" name="frequency" min="20" max="800">
+      <label for="frequency">Frequency</label>
+    </div>
+    <canvas id ="scope"></canvas>
+    <canvas id ="freq-scope"></canvas>
+    <script>
+        /*
+const context = new AudioContext();
+let node;
+document.getElementById("test").onchange = async (e) => {
+    if(e.target.checked){
+        await context.resume();
+        context.audioWorklet.addModule('sine-processor.js').then(() => {
+            node = new AudioWorkletNode(context, 'sine-processor');
+            node.connect(context.destination);
+    });
+}else{
+    if(node){
+        node.disconnect(context.destination)
+    }
+    context.suspend();
+}
+};
+
+document.getElementById("frequency").oninput = async (e) => {
+    if(node){
+        const freqParam = node.parameters.get('frequency');
+        freqParam.value = parseFloat(e.target.value);
+    }
+};
+*/
+    </script>
+  </body>
+</html>

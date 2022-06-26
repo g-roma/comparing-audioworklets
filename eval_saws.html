@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script type="module" src="eval_saws.js"></script>
+  </head>
+  <body>
+    Worklet:
+    <select id="worklet">
+      <option value="saw-js/saw-js-processor.js">JavaScript</option>
+      <option value="saw-ems-ps/saw-ems-ps-processor.js">Per-sample ems</option>
+      <option value="saw-ems-buf/saw-ems-buf-processor.js">Buffer-based ems</option>
+      <option value="saw-asc-ps/saw-asc-ps-processor.js">Per-sample asc</option>
+      <option value="saw-asc-buf/saw-asc-buf-processor.js">Buffer-based asc</option>
+    </select>
+
+    <!--button id="start">Start</button-->
+    Max  Oscillators: <input type="number" value="0" id="max-oscs">
+    Interval (ms) <input type="number" value="100" id="interval">
+    Number of Oscillators: <input type="number" value="0" id="num-oscs" readonly>
+    Run <input type="checkbox" id="run" name="run">
+
+
+  </body>
+</html>

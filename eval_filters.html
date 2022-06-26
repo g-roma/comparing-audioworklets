@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script type="module" src="eval_filters.js"></script>
+  </head>
+  <body>
+    Worklet:
+    <select id="worklet">
+      <option value="native">Native</option>
+      <option value="rlpf-js/rlpf-js-processor.js">JavaScript</option>
+      <option value="rlpf-ems-ps/rlpf-ems-ps-processor.js">Per-sample ems</option>
+      <option value="rlpf-ems-buf/rlpf-ems-buf-processor.js">Buffer-based ems</option>
+      <option value="rlpf-asc-ps/rlpf-asc-ps-processor.js">Per-sample asc</option>
+      <option value="rlpf-asc-buf/rlpf-asc-buf-processor.js">Buffer-based asc</option>
+    </select>
+
+    <!--button id="start">Start</button-->
+    Max  Filters: <input type="number" value="0" id="max-nodes">
+    Interval (ms) <input type="number" value="10" id="interval">
+    Number of Filters: <input type="number" value="0" id="num-nodes" readonly>
+    Run <input type="checkbox" id="run" name="run">
+    
+
+  </body>
+</html>
